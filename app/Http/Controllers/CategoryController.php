@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use Auth;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -23,11 +24,11 @@ class CategoryController extends Controller
       ]
     );
 
-      Category::insert([
-        'category_name' => $request->category_name,
-        'user_id' =>  Auth::user()->id,
-        'created_at' => Carbon::now()
-      ]);
+      // Category::insert([
+      //   'category_name' => $request->category_name,
+      //   'user_id' =>  Auth::user()->id,
+      //   'created_at' => Carbon::now()
+      // ]);
 
       //method below no need create at and update at
       // $category = new Category;
@@ -35,6 +36,15 @@ class CategoryController extends Controller
       // $category->user_id =Auth::user()->id;
       // $category->created_at =Carbon::now();
       // $category->save();
+
+  
+      //insert using query builder
+      $data = array();
+      $data['category_name'] = $request->category_name;
+      $data['user_id'] =Auth::user()->id;
+      $data['created_at'] = Carbon::now()
+      DB::table('categories')->insert($data);
+
 
       return redirect()->back()->with('success', 'Category Inserted Successfull');
 
