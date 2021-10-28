@@ -33,6 +33,8 @@ Route::get('/contact', [ContactController::class, 'index']) -> name('ariyan');
 
 //Category Controller
 Route::get('/category/all', [CategoryController::class, 'AllCat']) -> name('all.category');
+Route::post('/category/add', [CategoryController::class, 'AddCat']) -> name('store.category');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $users = User::all();
