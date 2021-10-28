@@ -12,7 +12,10 @@ class CategoryController extends Controller
 {
     public function AllCat(){
       // $categories = Category::all();
-      $categories = Category::latest()->get();
+      // $categories = Category::latest()->get();
+
+      //Query builder
+      $categories = DB::table('categories')->latest()->get();
 
 
       return view('admin.category.index', compact('categories'));
