@@ -43,9 +43,9 @@
                               {{-- @php($i = 1) --}}
                               @foreach ($brands as $key => $brand)
                                 <tr>
-                                    <th scope="row"> {{ $categories->firstItem()+$loop->index }}</th>
+                                    <th scope="row"> {{ $brands->firstItem()+$loop->index }}</th>
                                     <td> {{ $brand->brand_name }} </td>
-                                    <td> <img src="" alt="">  </td>
+                                    <td> <img src="{{ asset($brand->brand_image) }}" style="height:40px; width:70px;">  </td>
                                     {{-- <td> {{ $brand->name }}  </td> --}}
                                     <td>
                                       @if ( $brand->created_at == NULL)
@@ -73,7 +73,7 @@
                             Add Brand
                         </div>
                         <div class="card-body">
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('store.brand') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Brand Name</label>
