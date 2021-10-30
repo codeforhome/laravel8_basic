@@ -51,6 +51,8 @@ Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']);
 Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
 Route::get('/brand/delete/{id}', [BrandController::class, 'Delete']);
 
+// for Multi Image
+Route::get('/multi/image', [BrandController::class, 'Multpic']) -> name('multi.image');
 
 
 
