@@ -103,4 +103,6 @@ class CategoryController extends Controller
       return redirect()->back()->with('success', 'Category Permanently Delete Successfull');
 
     }
+
+
 }
