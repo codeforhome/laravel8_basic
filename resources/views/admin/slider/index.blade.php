@@ -11,7 +11,7 @@
             <div class="row">
 
   <h4>Home Slider</h4>
-              <a href="" class="float-right"> <button class="btn btn-info ">Add Slider</button></a>
+              <a href="{{ route('add.slider')}}" class="float-right"> <button class="btn btn-info ">Add Slider</button></a>
 <br><br>
 
 
@@ -42,10 +42,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                              {{-- @php($i = 1) --}}
+                              @php($i = 1)
                               @foreach ($sliders as $key => $slider)
                                 <tr>
-                                    <th scope="row"> {{ $slider->firstItem()+$loop->index }}</th>
+                                    {{-- <th scope="row"> {{ $slider->firstItem()+$loop->index }}</th> --}}
+                                    <th> {{ $i++}}</th>
                                     <td> {{ $slider->title }} </td>
                                     <td> {{ $slider->description }} </td>
 
