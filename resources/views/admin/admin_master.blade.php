@@ -55,7 +55,7 @@
           ——— LEFT SIDEBAR WITH FOOTER
           =====================================
         -->
-    @include('admin.body.sidebar')      
+    @include('admin.body.sidebar')
 
 
 
@@ -165,7 +165,7 @@
                       </li>
 
                       <li class="dropdown-footer">
-                        <a href="signin.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                        <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i> Log Out </a>
                       </li>
                     </ul>
                   </li>
