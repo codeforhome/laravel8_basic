@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HomeAbout;
+use App\Models\Multipic;
 use Illuminate\Support\Carbon;
 use Image;
 use Auth;
@@ -59,6 +60,12 @@ class AboutController extends Controller
         'long_dis' => $request -> long_dis
       ]);
       return redirect()->route('home.about')->  with('success', 'About Update Successfully');
+    }
+
+    public function Portfolio(){
+      $images = Multipic::all();
+
+      return view('pages.portfolio', compact('images'));
     }
 
 }

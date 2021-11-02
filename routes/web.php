@@ -83,6 +83,9 @@ Route::get('/about/edit/{id}', [AboutController::class, 'Edit']);
 Route::post('/about/update/{id}', [AboutController::class, 'Update']);
 Route::get('/about/delete/{id}', [AboutController::class, 'Delete']);
 
+//Portfolio Page Route
+Route::get('/portfolio', [AboutController::class, 'Portfolio']) -> name('portfolio');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();
