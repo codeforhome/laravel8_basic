@@ -48,13 +48,17 @@ class AboutController extends Controller
     }
 
     public function Edit($id){
+      $homeabout = HomeAbout::find($id);
+      return view('admin.home.edit', compact('homeabout'));
+    }
+
+    public function Update(Request $request, $id){
       HomeAbout::find($id)->update([
         'title' => $request -> title,
         'short_dis' => $request -> short_dis,
-        'long_dis' => $request -> long_dis,
-        'created_at' => Carbon::now()
+        'long_dis' => $request -> long_dis
       ]);
-      return redirect()->back()->  with('success', 'About Update Successfully');
+      return redirect()->route('home.about')->  with('success', 'About Update Successfully');
     }
 
 }
