@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 class ContactController extends Controller
@@ -53,6 +54,13 @@ class ContactController extends Controller
 
         return Redirect()->back()-> with('success', 'Contact Delete Successfully');
 
+    }
+
+    public function Contact(){
+      // $contacts = Contact::first();
+      $contacts = DB::table('contacts')->first();
+      //
+      return view('pages.contact', compact('contacts'));
     }
 
 }
