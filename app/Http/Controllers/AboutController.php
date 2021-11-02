@@ -43,7 +43,7 @@ class AboutController extends Controller
     }
 
     public function Delete($id){
-      HomeAbout::find($id)->delete();
+      $homeabout = HomeAbout::find($id)->delete();
       return redirect()->back()-> with('success', 'About Deleted Successfully');
     }
 
