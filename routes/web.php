@@ -86,10 +86,13 @@ Route::get('/about/delete/{id}', [AboutController::class, 'Delete']);
 //Portfolio Page Route
 Route::get('/portfolio', [AboutController::class, 'Portfolio']) -> name('portfolio');
 
-//admin page Page Route
+//admin Contact Page Route
 Route::get('/admin/contact', [ContactController::class, 'AdminContact']) -> name('admin.contact');
-
-
+Route::get('/admin/add/contact', [ContactController::class, 'AdminAddContact']) -> name('add.contact');
+Route::post('/admin/store/contact', [ContactController::class, 'AdminStoreContact']) -> name('store.contact');
+Route::get('/admin/contact/edit/{id}', [ContactController::class, 'AdminEditContact']);
+Route::post('/admin/contact/update/{id}', [ContactController::class, 'AdminUpdateContact']);
+Route::get('/admin/contact/delete/{id}', [ContactController::class, 'AdminDeleteContact']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();

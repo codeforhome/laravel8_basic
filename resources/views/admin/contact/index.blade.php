@@ -11,7 +11,7 @@
         <div class="row">
 
             <h4>Contact Page</h4>
-            <a href="{{ route('add.about')}}" class="float-right"> <button class="btn btn-info ">Add Contact</button></a>
+            <a href="{{ route('add.contact')}}" class="float-right"> <button class="btn btn-info ">Add Contact</button></a>
             <br><br>
 
 
@@ -54,8 +54,8 @@
 
                                 {{-- <td> {{ $brand->name }} </td> --}}
                                 <td>
-                                    <a href="{{ url('contact/edit/'.$contact->id)}}" class="btn btn-info ">Edit</a>
-                                    <a href="{{ url('contact/delete/'.$contact->id)}}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger ">Delete</a>
+                                    <a href="{{ url('admin/contact/edit/'.$contact->id)}}" class="btn btn-info ">Edit</a>
+                                    <a href="{{ url('admin/contact/delete/'.$contact->id)}}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger ">Delete</a>
 
                                 </td>
                             </tr>
