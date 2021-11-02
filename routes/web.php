@@ -98,6 +98,7 @@ Route::get('/admin/contact/delete/{id}', [ContactController::class, 'AdminDelete
 
 //Home Contact Page Route
 Route::get('/contact', [ContactController::class, 'Contact']) -> name('contact');
+Route::post('/contact/form', [ContactController::class, 'ContactForm']) -> name('contact.form');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
