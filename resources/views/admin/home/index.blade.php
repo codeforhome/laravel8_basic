@@ -11,7 +11,7 @@
         <div class="row">
 
             <h4>Home About</h4>
-            <a href="{{ route('add.slider')}}" class="float-right"> <button class="btn btn-info ">Add About</button></a>
+            <a href="{{ route('add.about')}}" class="float-right"> <button class="btn btn-info ">Add About</button></a>
             <br><br>
 
 
@@ -36,7 +36,7 @@
                                 <th scope="col" width="5%">SL No</th>
                                 <th scope="col" width="15%">Home Title</th>
                                 <th scope="col" width="15%">Short Description</th>
-                                <th scope="col" width="15%">Long Description</th>
+                                <th scope="col" width="50%">Long Description</th>
                                 <th scope="col" width="15%">Action</th>
 
                             </tr>

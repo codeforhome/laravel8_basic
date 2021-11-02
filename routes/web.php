@@ -6,11 +6,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
-<<<<<<< HEAD
 use App\Http\Controllers\AboutController;
 
-=======
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
 
 
 use App\Models\User;
@@ -69,7 +66,6 @@ Route::post('/multi/add', [BrandController::class, 'StoreImg']) -> name('store.i
 
 //Admin All route
 Route::get('/home/slider', [HomeController::class, 'HomeSlider']) -> name('home.slider');
-<<<<<<< HEAD
 Route::get('/add/slider', [HomeController::class, 'AddSlider']) -> name('add.slider');
 Route::post('/store/slider', [HomeController::class, 'StoreSlider']) -> name('store.slider');
 Route::get('/slider/edit/{id}', [HomeController::class, 'Edit']);
@@ -78,9 +74,8 @@ Route::get('/slider/delete/{id}', [HomeController::class, 'Delete']);
 
 //Home About All Route
 Route::get('/home/about', [AboutController::class, 'HomeAbout']) -> name('home.about');
-=======
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
-
+Route::get('/add/about', [AboutController::class, 'AddAbout']) -> name('add.about');
+Route::post('/store/about', [AboutController::class, 'StoreAbout']) -> name('store.about');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();

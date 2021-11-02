@@ -11,11 +11,7 @@
             <div class="row">
 
   <h4>Home Slider</h4>
-<<<<<<< HEAD
               <a href="{{ route('add.slider')}}" class="float-right"> <button class="btn btn-info ">Add Slider</button></a>
-=======
-              <a href="" class="float-right"> <button class="btn btn-info ">Add Slider</button></a>
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
 <br><br>
 
 
@@ -37,35 +33,20 @@
                         <table class="table">
                             <thead>
                                 <tr>
-<<<<<<< HEAD
                                     <th scope="col" width="5%">SL No</th>
                                     <th scope="col" width="15%">Slider Title</th>
                                     <th scope="col" width="50%">Description</th>
                                     <th scope="col" width="15%">Image</th>
                                     <th scope="col" width="15%">Action</th>
-=======
-                                    <th scope="col">SL No</th>
-                                    <th scope="col">Slider Title</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Action</th>
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
 
                                 </tr>
                             </thead>
                             <tbody>
-<<<<<<< HEAD
                               @php($i = 1)
                               @foreach ($sliders as $key => $slider)
                                 <tr>
                                     {{-- <th scope="row"> {{ $slider->firstItem()+$loop->index }}</th> --}}
                                     <th> {{ $i++}}</th>
-=======
-                              {{-- @php($i = 1) --}}
-                              @foreach ($sliders as $key => $slider)
-                                <tr>
-                                    <th scope="row"> {{ $slider->firstItem()+$loop->index }}</th>
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
                                     <td> {{ $slider->title }} </td>
                                     <td> {{ $slider->description }} </td>
 

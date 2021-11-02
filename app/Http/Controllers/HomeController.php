@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Slider;
-<<<<<<< HEAD
 use Illuminate\Support\Carbon;
 use Image;
 use Auth;
@@ -16,18 +15,11 @@ class HomeController extends Controller
       $this->middleware('auth');
     }
 
-=======
-
-class HomeController extends Controller
-{
-    //
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
   public function HomeSlider(){
 
     $sliders = Slider::latest()->get();
     return view('admin.slider.index', compact('sliders'));
   }
-<<<<<<< HEAD
 
   public function AddSlider(){
 
@@ -99,6 +91,4 @@ class HomeController extends Controller
 
         return Redirect()->back()-> with('success', 'Slider Updated Successfully');
   }
-=======
->>>>>>> a2ed02a4962cbc6cdd90394297ba0610ae788067
 }
